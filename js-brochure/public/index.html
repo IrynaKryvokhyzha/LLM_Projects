@@ -1,0 +1,79 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Brochure Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mb-4">Company Brochure Generator</h1>
+          <div class="card">
+            <div class="card-body">
+              <form id="brochureForm">
+                <div class="mb-3">
+                  <label for="companyName" class="form-label"
+                    >Company name:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="url" class="form-label"
+                    >Landing page URL including http://</label
+                  >
+                  <input type="url" class="form-control" id="url" required />
+                </div>
+                <div class="mb-3">
+                  <label for="model" class="form-label">Select model</label>
+                  <select class="form-select" id="model">
+                    <option value="GPT" selected>GPT</option>
+                    <option value="Claude">Claude</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Generate Brochure
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3>Brochure</h3>
+              <div
+                id="loading"
+                class="spinner-border text-primary d-none"
+                role="status"
+              >
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="output" class="markdown-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

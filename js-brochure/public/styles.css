@@ -1,0 +1,61 @@
+/* public/styles.css */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.card-header {
+  background-color: #252525;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control,
+.form-select {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #333;
+  border-color: #666;
+  color: #fff;
+}
+
+.markdown-content {
+  padding: 10px;
+  min-height: 200px;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #fff;
+}
+
+.markdown-content a {
+  color: #3ea6ff;
+}
+
+.markdown-content code {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.markdown-content pre {
+  background-color: #2d2d2d;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
